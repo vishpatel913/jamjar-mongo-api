@@ -6,6 +6,7 @@ var Space = require("./api/models/spaceModel");
 var bodyParser = require("body-parser");
 var multer = require("multer");
 var db = require("./config/db");
+require("dotenv").config();
 
 var app = express();
 var port = process.env.PORT || 3000;

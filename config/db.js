@@ -1,3 +1,3 @@
 module.exports = {
-  url: "mongodb://<dbuser>:<dbpassword>@ds211592.mlab.com:11592/jamjar_cowork"
+  url: `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:11592/jamjar_cowork`
 };
