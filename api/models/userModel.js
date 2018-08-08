@@ -9,6 +9,10 @@ var UserSchema = new Schema({
   },
   role: String,
   bio: String,
+  email: {
+    type: String,
+    required: "Email used for Facebook login"
+  },
   // TODO: image storing in mongoose
   // image: { data: Buffer, contentType: String },
   image: String,
