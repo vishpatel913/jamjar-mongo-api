@@ -17,7 +17,7 @@ var UserSchema = new Schema({
       type: String,
       enum: ["inactive", "active", "busy"]
     },
-    default: ["inactive"]
+    default: "inactive"
   },
   space_list: [
     {
