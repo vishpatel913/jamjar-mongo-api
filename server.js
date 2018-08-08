@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var User = require("./api/models/userModel");
 var Device = require("./api/models/deviceModel");
 var Space = require("./api/models/spaceModel");
+var Chat = require("./api/models/chatModel");
 var bodyParser = require("body-parser");
 var multer = require("multer");
 var db = require("./config/db");
@@ -15,6 +16,8 @@ app.get("/", (req, res) => res.send("Server Works Baby!"));
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
+
+// db.url = `mongodb://localhost:27017/test_db`;
 mongoose.connect(db.url);
 
 // NOTE: populate tables
