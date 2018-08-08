@@ -13,10 +13,8 @@ var UserSchema = new Schema({
   // image: { data: Buffer, contentType: String },
   image: String,
   status: {
-    type: {
-      type: String,
-      enum: ["inactive", "active", "busy"]
-    },
+    type: String,
+    enum: ["inactive", "active", "busy"],
     default: "inactive"
   },
   space_list: [
