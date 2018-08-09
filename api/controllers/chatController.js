@@ -27,7 +27,7 @@ exports.create_a_chat = function(req, res) {
 
 exports.read_a_chat = function(req, res) {
   Chat.findOne({
-    users: [req.params.senderId, req.params.receiverId]
+    users: { $all: [req.params.senderId, req.params.receiverId] }
   })
     .populate("messages.sender", "name status")
     .exec(function(err, chat) {
