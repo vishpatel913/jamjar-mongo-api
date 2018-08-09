@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-  facebook_id: {
-    type: String
-    // unique: true,
-    // required: true
+  _id: {
+    type: String,
+    unique: true,
+    required: true
   },
   name: {
     type: String,
