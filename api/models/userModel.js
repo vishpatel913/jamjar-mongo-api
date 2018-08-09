@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
   facebook_id: {
-    type: String,
-    unique: true,
-    required: true
+    type: String
+    // unique: true,
+    // required: true
   },
   name: {
     type: String,
