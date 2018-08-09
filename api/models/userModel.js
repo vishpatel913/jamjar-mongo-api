@@ -3,18 +3,18 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
+  facebook_id: {
+    type: String,
+    unique: true,
+    required: true
+  },
   name: {
     type: String,
-    required: "Full name of the user"
+    required: true
   },
   role: String,
   bio: String,
-  email: {
-    type: String,
-    required: "Email used for Facebook login"
-  },
-  // TODO: image storing in mongoose
-  // image: { data: Buffer, contentType: String },
+  email: String,
   image: String,
   status: {
     type: String,
