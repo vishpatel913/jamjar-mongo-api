@@ -7,6 +7,7 @@ var fs = require("fs");
 exports.list_all_users = function(req, res) {
   User.find({})
     .populate("current_space", "name coords major_id")
+    .populate("current_device")
     .exec(function(err, user) {
       if (err) res.send(err);
       res.json(user);
